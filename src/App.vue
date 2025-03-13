@@ -1,5 +1,6 @@
 <script setup>
 import {ref, computed} from 'vue'
+import AiResponse from "@/components/aiResponse.vue";
 
 const questions = ref([
       {
@@ -120,6 +121,9 @@ const nextQuestion = () => {
                 : 'Next Question'
       }}
     </button>
+
+  <ai-response :Question="getCurrentQuestion"/>
+
   </section>
   <section v-else>
     <h2> You have finished the Quiz</h2>
